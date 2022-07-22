@@ -1,0 +1,33 @@
+.erro-container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.erro-container h1 {
+  font-size: 100px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.erro-container h6 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.erro-container a {
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.erro-container a:hover {
+  color: #5e00f5;
+  border: 1px solid #5e00f5;
+}

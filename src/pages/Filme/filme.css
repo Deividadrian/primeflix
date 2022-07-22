@@ -1,0 +1,28 @@
+.containerfilme {
+  height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  color: white;
+}
+
+.containerfilme img{
+  height: 70%;
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.containerfilme h1 {
+  margin-bottom: 10px;
+}
+
+.sinopse {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.overview {
+  margin-bottom: 10px;
+}

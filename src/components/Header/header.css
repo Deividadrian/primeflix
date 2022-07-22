@@ -1,0 +1,31 @@
+.header {
+  background: linear-gradient(0.25turn, #5e00f5, #eb00df);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  color: white;
+  box-shadow: 0px 5px 20px 1px black
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+
+}
+
+.favoritos {
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.favoritos:hover {
+  color: #5e00f5;
+  border: 1px solid #5e00f5;
+}
