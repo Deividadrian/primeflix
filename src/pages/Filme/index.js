@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 import './filme.css'
 
 function Filme() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [filme, setFilme] = useState({})
   const [loading, setLoading] = useState(true)
 
@@ -23,10 +24,15 @@ function Filme() {
         })
         .catch(() => {
           console.log('FILME NÃO ENCONTRADO!')
+          navigate('/', { replace: true })
         })
     }
     loadFilme()
-  }, [])
+  }, [navigate, id])
+
+  function salvarFilme() {
+    alert('Teste')
+  }
 
   if (loading) {
     return (
@@ -48,9 +54,22 @@ function Filme() {
         alt={filme.title}
       />
       <div className="sinopse">
-        <h1>{`${filme.title} (${filme.release_date.slice(0, -6)})`}</h1>
+        <h1>{`${filme.title} (${filme.release_date.slice(0, 4)})`}</h1>
         <strong className="overview">{filme.overview}</strong>
-        <strong className="nota">{filme.vote_average}</strong>
+        <strong className="nota">Nota: {filme.vote_average}</strong>
+
+        <div className="area-button">
+          <button onClick={salvarFilme}>Salvar</button>
+          <button>
+            <a
+              target="blank"
+              rel="external"
+              href={`https://www.youtube.com/results?search_query=${filme.title} Trailer`}
+            >
+              Trailer
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   )

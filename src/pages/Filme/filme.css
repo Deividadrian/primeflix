@@ -23,6 +23,18 @@
   margin-bottom: 10px;
 }
 
+.nota {
+  margin-bottom: 10px;
+}
+
 .overview {
   margin-bottom: 10px;
+}
+
+.area-button button{
+  cursor: pointer;
+}
+
+.area-button button a {
+  text-decoration: none;
 }

@@ -60,11 +60,4 @@ function Home() {
   )
 }
 
-/*
-<p>
-                <strong>Sinopse: </strong>
-                {filme.overview}
-              </p>
- */
-
 export default Home
