@@ -28,8 +28,8 @@
   text-decoration: none;
 }
 
-.titlefilme {
-  color: black;
+strong .titlefilme {
+  color: white;
   font-size: 10pt;
 }
 .titlefilme:hover {

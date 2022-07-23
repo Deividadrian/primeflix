@@ -1,0 +1,37 @@
+.meus-filmes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cardfilme {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-left: 5px;
+  width: calc((100% / 10));
+}
+
+.cardfilme img{
+  width: 150px;
+  border-radius: 10px;
+}
+
+.cardfilme img:hover{
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.cardfilme a {
+  text-decoration: none;
+}
+
+strong .titlefilme {
+  color: white;
+  font-size: 10pt;
+}
+.titlefilme:hover {
+  color: #5e00f5;
+}
