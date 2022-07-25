@@ -31,7 +31,9 @@
 strong .titlefilme {
   color: white;
   font-size: 10pt;
+  margin-bottom: 10px;
 }
+
 .titlefilme:hover {
   color: #5e00f5;
 }

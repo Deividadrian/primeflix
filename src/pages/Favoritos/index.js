@@ -4,11 +4,31 @@ import { Link } from 'react-router-dom'
 
 function Favoritos() {
   const [filmes, setFilmes] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const minhaLista = localStorage.getItem('@primeflix')
     setFilmes(JSON.parse(minhaLista) || [])
+
+    setLoading(false)
   }, [])
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <div className="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    )
+  }
+
+  function excluirFilme() {
+    alert('Excluido')
+  }
 
   return (
     <div className="meus-filmes">
@@ -24,6 +44,9 @@ function Favoritos() {
                 <p className="titlefilme">{filme.title}</p>
               </strong>
             </Link>
+            <button onClick={excluirFilme} className="excluir">
+              Excluir
+            </button>
           </div>
         )
       })}
