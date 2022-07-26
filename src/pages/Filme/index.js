@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 import './filme.css'
+import { toast } from 'react-toastify'
 
 function Filme() {
   const { id } = useParams()
@@ -23,7 +24,6 @@ function Filme() {
           setLoading(false)
         })
         .catch(() => {
-          console.log('FILME NÃO ENCONTRADO!')
           navigate('/', { replace: true })
         })
     }
@@ -38,13 +38,13 @@ function Filme() {
     const hasFilme = filmeSalvos.some(filmeSalvo => filmeSalvo.id === filme.id)
 
     if (hasFilme) {
-      alert('ESSE FILME JÁ ESTA NA LISTA')
+      toast.warn('FILME JÁ ESTA NA LISTA')
       return
     }
 
     filmeSalvos.push(filme)
     localStorage.setItem('@primeflix', JSON.stringify(filmeSalvos))
-    alert('FILME SALVO COM SUCESSO')
+    toast.success('FILME SALVO COM SUCESSO')
   }
 
   if (loading) {
@@ -72,8 +72,10 @@ function Filme() {
         <strong className="nota">Nota: {filme.vote_average}</strong>
 
         <div className="area-button">
-          <button onClick={salvarFilme}>Salvar</button>
-          <button>
+          <button className="salvar-filme" onClick={salvarFilme}>
+            Salvar
+          </button>
+          <button className="trailer-filme">
             <a
               target="blank"
               rel="external"

@@ -38,3 +38,38 @@
 .area-button button a {
   text-decoration: none;
 }
+
+.area-button {
+  display: flex;
+  align-items: center;
+  height: 6%;
+
+}
+
+.area-button button {
+  height: 90%;
+  width: 10%;
+  margin-right: 10px;
+  border: none;
+}
+
+.trailer-filme {
+  background-color: #5e00f5;
+}
+
+.trailer-filme:hover {
+  background-color: #5e00f59c;
+}
+
+.trailer-filme a {
+  color: white;
+}
+
+.salvar-filme {
+  background-color: #eb00df;
+  color: white;
+}
+
+.salvar-filme:hover {
+  background-color: #eb00df8f;
+}

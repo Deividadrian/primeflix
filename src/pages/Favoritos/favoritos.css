@@ -37,3 +37,15 @@ strong .titlefilme {
 .titlefilme:hover {
   color: #5e00f5;
 }
+
+.excluir {
+  background-color: #5e00f5;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.excluir:hover {
+  background-color: #5e00f59c;
+}
